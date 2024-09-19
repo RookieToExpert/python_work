@@ -8,3 +8,5 @@ elif 'red' in alien_color:
     print('You earn 15 points!')
 else:
     print('No points!')
+
+for
