@@ -1,3 +1,4 @@
+#6.1:Person
 person = {
     'first_name' : 'ray',
     'last_name' : 'tang',
@@ -10,6 +11,8 @@ print(person['last_name'])
 print(person['age'])
 print(person['city'])
 
+
+#6.2:Favorite_number
 favorite_number = {
     'ray' : 22,
     'jenny' : 3,

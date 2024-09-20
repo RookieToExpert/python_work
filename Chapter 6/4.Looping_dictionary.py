@@ -41,11 +41,35 @@ for name in favorite_languages.keys():
     if name in name_list:
         print(f"Hi {name.title()}, I know your favorite language is {favorite_languages[name]} ")
 
-
-#If and for loop work together with dicitionary
+#Another example
 name_list = ['ray', 'michael', 'jenny', 'ben']
 for name in name_list:
     print(f"Hi, {name.title()}, good to see you!")
 
     if name in favorite_languages.keys():
         print(f"Hi {name.title()}, I know your favorite language is {favorite_languages[name]} ")
+
+
+#Looping through a dictionary's keys in a particular order
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, thank you for taking the poll.")
+
+
+#Looping through all values in a dictionary
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+#Use set to reduce the duplication,  a set is a collection in which each item must be unique/
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+#You can build a set directly using brases and separating the elements with commas
+set = {
+    'repeated',
+    'repeated',
+    'Unique',
+    'Unique2'
+}
+print(set)
