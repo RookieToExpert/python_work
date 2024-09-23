@@ -10,7 +10,6 @@
 
 #7.5 Movie tickets
 prompt = "\nTell me your age:"
-prompt += "\nEnter 'quit' to end the program. \nPlease enter here: "
 while True:
     age = int(input(prompt))
     if age < 3:
@@ -20,3 +19,4 @@ while True:
     else:
         print("You need to pay 15 bucks for your ticket.")
     break
+
