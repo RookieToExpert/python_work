@@ -33,7 +33,7 @@ for value in range(1, 10):
 
 for number in number_list:
     if number < 3 and number == 1:
-        print("The ordial number of this number is 1st")
+        print("The ordial number of this nAumber is 1st")
     elif number == 2:
         print("The ordial number of this number is 2nd")
     elif number == 3:
