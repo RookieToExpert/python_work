@@ -17,7 +17,7 @@ class Restaurant:
 #9.2 Create an instance
 my_restaurant = Restaurant('Chinese Kung Fu', 'SiChuan')
 
-
+#9.3 Use Method
 my_restaurant.describe_resturant()
 my_restaurant.open_restaurant()
 

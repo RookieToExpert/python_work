@@ -1,5 +1,4 @@
-#Inheritance a child class from its parent class
-#Parent class from four
+#9.6 Ice Cream Stand
 class Restaurant:
     """Create Restaurant with name and cusine"""
 
@@ -46,12 +45,43 @@ class Restaurant:
         self.customer_numbers = 0
         print(f"The current customer's number has been reset to {self.customer_numbers}.")
 
-#Child class
-class RayRestaurant(Restaurant):
-    """Represent aspects of restaurant, spcific to ray's resaurant."""
-    def __int__(self, restaurant_name, cuisine_type):
-        """Initialized attributes of the parent class"""
-        super().__init__(restaurant_name, cuisine_type)
+class IcmCreamStand(Restaurant):
+    def __init__(self, stand_name, icm_cream_type):
+        """Define initial method"""
+        super().__init__(stand_name, icm_cream_type)
+        self.flavor = IcmCreamFlavor()
+
+
+
+class IcmCreamFlavor:
+    def __init__(self, flavor=["milk", "cocnut", "strawberry"]):
+        self.flavor = flavor
+        self.flavor_number = len(self.flavor)
     
-ray_restaurant1 = RayRestaurant("ray_restaurant1", "GuangDong")
-print(ray_restaurant1.customer_numbers)
+    
+    def print_flavor(self):
+        """Print the flavor(s) of Icm Cream."""
+        print("The current on-sale icm cream flavors are:")
+        for single_flavor in self.flavor:
+            print(single_flavor)
+
+    def upgrade_flavor(self):
+        """Increase the flavor types if too low"""
+        if self.flavor_number < 5:
+            print(f"The number of the Icm Cream type is {self.flavor_number}, it's lower to 5, please increase more types!")
+        else:
+            print("You have enough types!")
+    def add_flavor(self, *flavor_type):
+        """Add more flavors."""
+        for flavor in flavor_type:
+            self.flavor.append(flavor)
+        self.flavor_number = len(self.flavor)
+
+
+
+sunday = IcmCreamStand("Sunday", "Corn")
+sunday.flavor.print_flavor()
+sunday.flavor.upgrade_flavor()
+sunday.flavor.add_flavor("valina", "chocolate", "blueberry")
+sunday.flavor.print_flavor()
+sunday.flavor.upgrade_flavor()
